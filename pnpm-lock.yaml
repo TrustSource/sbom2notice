@@ -75,7 +75,7 @@ importers:
         specifier: 3.0.22
         version: 3.0.22
       spdx-license-list:
-        specifier: ^6.10.0
+        specifier: 6.10.0
         version: 6.10.0
       tailwind-merge:
         specifier: 3.3.1
