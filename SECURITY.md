@@ -3,7 +3,7 @@ Contact: mailto:support@trustsource.io
 Contact: https://www.trustsource.io/contact-security
 
 # Expiry
-Expires: 2026-01-10T20:00:00.000Z
+Expires: 2027-01-10T20:00:00.000Z
 
 # Our OpenPGP key
 Encryption: https://www.trustsource.io/security-policy
