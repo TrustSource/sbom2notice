@@ -18,9 +18,10 @@ Local-first tool for developers and compliance managers to **convert SBOMs (SPDX
 - [Next.js 15 (App Router)](https://nextjs.org/)
 - [React 19](https://react.dev/)
 - [Tailwind CSS 4](https://tailwindcss.com/)
-- [shadcn/ui 3.2.1](https://ui.shadcn.com/)
+- [shadcn/ui 4](https://ui.shadcn.com/)
 - [i18next](https://www.i18next.com/)
 - Local-first persistence (`localStorage`)
+- [Vitest](https://vitest.dev/) + [Playwright](https://playwright.dev/) for testing
 
 ## Getting Started
 
@@ -52,7 +53,31 @@ The app will be available at http://localhost:3000
 - Open any NOTICE to:
   - Review or edit fields.
   - Track completion.
-  - Copy or download the final JSON.
+  - Export the final NOTICE as **JSON, CSV, or Markdown**.
+
+## Testing
+
+The project ships with two test suites, both grouped under `tests/`:
+
+```
+tests/
+├── unit/   # Vitest — pure logic (validators, conversion, progress, storage)
+└── e2e/    # Playwright — full browser flows (upload, edit, export, navigation)
+```
+
+Run them with:
+
+```bash
+pnpm test            # unit tests (Vitest)
+pnpm test:watch      # unit tests in watch mode
+pnpm test:coverage   # unit tests with v8 coverage report
+
+pnpm e2e             # end-to-end tests (Playwright, headless Chromium)
+pnpm e2e:ui          # Playwright UI mode for interactive debugging
+pnpm e2e:report      # open the last HTML report
+```
+
+The Playwright config auto-starts `pnpm dev` on port 3100; no manual server needed.
 
 ## Contributing
 

@@ -1,0 +1,31 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "sample-spdx",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-express",
+      "name": "express",
+      "versionInfo": "4.18.2",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "copyrightText": "Copyright (c) 2009-2014 TJ Holowaychuk",
+      "downloadLocation": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
+      "homepage": "https://expressjs.com",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/express@4.18.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-zlib",
+      "name": "zlib",
+      "versionInfo": "1.2.13",
+      "licenseConcluded": "Zlib"
+    }
+  ]
+}

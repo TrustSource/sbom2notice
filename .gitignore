@@ -13,6 +13,10 @@ dist/
 
 # testing
 /coverage
+/playwright-report
+/test-results
+/blob-report
+/.playwright
 
 # production
 /.vercel
