@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { version as appVersion } from "./package.json";
 
 const securityHeaders = [
   { key: "X-Frame-Options", value: "DENY" },
@@ -48,6 +49,7 @@ const nextConfig: NextConfig = {
   typedRoutes: true,
   env: {
     NEXT_PUBLIC_BASE_PATH: isPages ? `/${repo}` : "",
+    NEXT_PUBLIC_APP_VERSION: appVersion,
   },
   ...(isPages ? {} : {
     async headers(){
