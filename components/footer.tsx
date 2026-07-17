@@ -25,6 +25,8 @@ export default function SiteFooter() {
   const year = new Date().getFullYear();
   const { t } = useTranslation("common");
 
+  const appVersion = process.env.NEXT_PUBLIC_APP_VERSION;
+
   return (
     <footer className="w-full border-t bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
@@ -32,6 +34,7 @@ export default function SiteFooter() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="text-sm text-muted-foreground">
               <span className="font-medium text-foreground">{siteConfig.name}</span> - {t("app.name")}
+              {appVersion && <span className="ml-2 text-xs text-muted-foreground/70">v{appVersion}</span>}
             </div>
 
             <div className="flex items-center gap-2">
