@@ -34,11 +34,11 @@ export function validateSbom(obj: unknown) {
   if (kind === "cyclonedx") {
     const parsed = cycloneDxSchema.safeParse(obj);
     return parsed.success
-      ? { ok: true as const, kind, data: parsed.data }
+      ? { ok: true as const, kind: "cyclonedx" as const, data: parsed.data }
       : { ok: false as const, error: parsed.error.message };
   }
   const parsed = spdxSchema.safeParse(obj);
   return parsed.success
-    ? { ok: true as const, kind, data: parsed.data }
+    ? { ok: true as const, kind: "spdx" as const, data: parsed.data }
     : { ok: false as const, error: parsed.error.message };
 }
