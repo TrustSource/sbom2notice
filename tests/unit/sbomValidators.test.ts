@@ -32,8 +32,8 @@ describe("validateSbom", () => {
   it("accepts a valid CycloneDX document", () => {
     const result = validateSbom(cycloneDxBasic);
     expect(result.ok).toBe(true);
-    if (result.ok) {
-      expect(result.kind).toBe("cyclonedx");
+    expect(result.ok && result.kind).toBe("cyclonedx");
+    if (result.ok && result.kind === "cyclonedx") {
       expect(result.data.bomFormat).toBe("CycloneDX");
     }
   });
@@ -41,8 +41,8 @@ describe("validateSbom", () => {
   it("accepts a valid SPDX document", () => {
     const result = validateSbom(spdxBasic);
     expect(result.ok).toBe(true);
-    if (result.ok) {
-      expect(result.kind).toBe("spdx");
+    expect(result.ok && result.kind).toBe("spdx");
+    if (result.ok && result.kind === "spdx") {
       expect(result.data.spdxVersion).toBe("SPDX-2.3");
     }
   });
